@@ -1,14 +1,22 @@
 <LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="48dp"
-    android:layout_width="match_parent">
+    android:layout_height="@dimen/_27sdp"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/item_name"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/_25sdp"
         android:background="?android:attr/selectableItemBackground"
         android:drawablePadding="16dp"
-        android:textSize="14sp"
+        android:textSize="@dimen/_11sdp"
         android:gravity="center_vertical"
+        android:textStyle="bold"
         android:textColor="@color/myTextPrimaryColor"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/myPrimaryColor"/>
+
 </LinearLayout>

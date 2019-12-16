@@ -1,4 +1,4 @@
-package com.besolutions.drnour;
+package com.besolutions.drnour.Scenarios.ScenarioHome.Pattrens;
 
 
 import android.support.v7.widget.RecyclerView;
@@ -6,6 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.besolutions.drnour.Scenarios.ScenarioHome.Model.NavigationItem;
+import com.besolutions.drnour.R;
 
 import java.util.List;
 
@@ -31,6 +34,7 @@ public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDraw
 
     @Override
     public NavigationDrawerAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.drawer_row, viewGroup, false);
         final ViewHolder viewHolder = new ViewHolder(v);
         viewHolder.itemView.setClickable(true);
@@ -50,10 +54,12 @@ public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDraw
         );
         viewHolder.itemView.setBackgroundResource(R.drawable.row_selector);
         return viewHolder;
+
     }
 
     @Override
     public void onBindViewHolder(NavigationDrawerAdapter.ViewHolder viewHolder, int i) {
+
         viewHolder.textView.setText(mData.get(i).getText());
         viewHolder.textView.setCompoundDrawablesWithIntrinsicBounds(mData.get(i).getDrawable(), null, null, null);
         if (mSelectedPosition == i) {
@@ -63,7 +69,7 @@ public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDraw
             mSelectedPosition = i;
             mSelectedView = viewHolder.itemView;
             mSelectedView.setSelected(true);
-        }else{
+        } else {
             if (mSelectedView != null) {
                 mSelectedView.setSelected(false);
             }
@@ -80,6 +86,8 @@ public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDraw
     public int getItemCount() {
         return mData != null ? mData.size() : 0;
     }
+
+
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView textView;

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#ffff</color>
+    <color name="colorAccent">#000</color>
 
     <!--
         Check Android Theme colors for color reference:
@@ -22,4 +22,9 @@
 
     <drawable name="pressed_gray">#0c000000</drawable>
     <drawable name="selected_gray">#2c000000</drawable>
+
+    <color name="ColorFaceBook">#0b2366</color>
+
+    <color name="colorDarkerGray2">#5C5C5C</color>
+    <color name="colorDarkerGray3">#3D3D3D</color>
 </resources>

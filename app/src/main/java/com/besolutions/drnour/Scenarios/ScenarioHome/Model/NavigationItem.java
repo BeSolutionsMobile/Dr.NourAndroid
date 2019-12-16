@@ -1,4 +1,4 @@
-package com.besolutions.drnour;
+package com.besolutions.drnour.Scenarios.ScenarioHome.Model;
 
 
 import android.graphics.drawable.Drawable;
