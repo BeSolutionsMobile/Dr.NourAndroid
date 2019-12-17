@@ -1,8 +1,7 @@
 package com.besolutions.drnour.Scenarios.ScenarioHome.Controller;
 
+import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -24,6 +23,7 @@ import com.besolutions.drnour.Scenarios.ScenarioPersonalInfo.Controller.Personal
 import com.besolutions.drnour.Scenarios.ScenarioReferral.Controller.My_Referral;
 import com.besolutions.drnour.Scenarios.ScenarioResevation.Controller.My_Reservation;
 import com.besolutions.drnour.Scenarios.ScenarioReviews.Controller.Reviews;
+import com.besolutions.drnour.Scenarios.ScenarioViewAllReservations.Controller.View_All_Reservation;
 
 
 public class MainActivity extends AppCompatActivity
@@ -33,16 +33,22 @@ public class MainActivity extends AppCompatActivity
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
     private NavigationDrawerFragment mNavigationDrawerFragment;
-    private Toolbar mToolbar;
+    static private Toolbar mToolbar;
+    static String title;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        title="Dr Noor";
         mToolbar = (Toolbar) findViewById(R.id.toolbar_actionbar);
+        mToolbar.setTitleTextColor(Color.parseColor("#ffffff"));
+        mToolbar.setTitle(title);
         setSupportActionBar(mToolbar);
+        FragmentTransaction fr = this.getSupportFragmentManager().beginTransaction();
+        fr.replace(R.id.container,new View_All_Reservation());
+        fr.commit();
 
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)

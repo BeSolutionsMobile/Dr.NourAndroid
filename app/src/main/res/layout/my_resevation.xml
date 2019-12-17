@@ -3,14 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="1">
 
 
 
    <android.support.v7.widget.RecyclerView
        android:id="@+id/rcyReservation"
        android:layout_width="match_parent"
-       android:layout_height="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight=".99"
        android:layout_marginBottom="@dimen/_5sdp"
        android:background="@drawable/raduis_all"
        tools:listitem="@layout/reservision_item"/>

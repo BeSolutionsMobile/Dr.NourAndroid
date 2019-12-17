@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.besolutions.drnour.R;
+import com.besolutions.drnour.Scenarios.ScenarioHome.Controller.MainActivity;
 
 public class About_DrNour extends Fragment {
 
@@ -20,6 +21,8 @@ public class About_DrNour extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
         view = inflater.inflate(R.layout.about_drnour, container, false);
+        ((MainActivity) getActivity()).getSupportActionBar().setTitle(" About Dr.Nour");
+
         return view;
     }
 

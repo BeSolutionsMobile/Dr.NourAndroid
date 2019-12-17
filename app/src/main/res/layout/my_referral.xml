@@ -1,16 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="referral me"
-        android:textStyle="bold"
-        android:textColor="@color/myTextPrimaryColor"
-        android:textSize="@dimen/_30sdp"
-        android:gravity="center"/>
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_220sdp"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/bgdentist"
+            android:scaleType="fitXY"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight=".62">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rcyReferral"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_270sdp"
+                android:background="@drawable/raduis_all"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_20sdp"/>
+
+        </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
 
 </LinearLayout>

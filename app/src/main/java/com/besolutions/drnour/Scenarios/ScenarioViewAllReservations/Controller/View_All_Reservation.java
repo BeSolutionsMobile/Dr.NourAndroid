@@ -1,4 +1,4 @@
-package com.besolutions.drnour.Scenarios.ScenarioResevation.Controller;
+package com.besolutions.drnour.Scenarios.ScenarioViewAllReservations.Controller;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -14,25 +14,25 @@ import com.besolutions.drnour.R;
 import com.besolutions.drnour.Scenarios.ScenarioHome.Controller.MainActivity;
 import com.besolutions.drnour.Scenarios.ScenarioResevation.Model.Reservation_Model;
 import com.besolutions.drnour.Scenarios.ScenarioResevation.Pattrens.Reservation_Adabter;
+import com.besolutions.drnour.Scenarios.ScenarioViewAllReservations.Model.View_All_Model;
+import com.besolutions.drnour.Scenarios.ScenarioViewAllReservations.Pattrens.View_all_Adabter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class My_Reservation extends Fragment {
+public class View_All_Reservation extends Fragment {
+
 
     private View view;
-
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
-        view = inflater.inflate(R.layout.my_resevation, container, false);
+        view = inflater.inflate(R.layout.view_all_reservation, container, false);
+        ((MainActivity) getActivity()).getSupportActionBar().setTitle("Ahmed Reservation");
 
-        ((MainActivity) getActivity()).getSupportActionBar().setTitle("My Reservation");
-
-
-        List<Reservation_Model> reservation_models = new ArrayList<>();
+        List<View_All_Model> reservation_models = new ArrayList<>();
 
         String operte[] ={"Hollywood Smile", "Hollywood Smile", "Hollywood Smile", "Hollywood Smile", "Hollywood Smile", "Hollywood Smile", "Hollywood Smile", "Hollywood Smile", "Hollywood Smile", "Hollywood Smile", "Hollywood Smile", "Hollywood Smile", "Hollywood Smile", "Hollywood Smile", "Hollywood Smile"};
         String price[] ={"3000", "3000", "3000","3000", "3000","3000", "3000", "3000","3000", "3000","3000", "3000", "3000","3000","3000"};
@@ -40,14 +40,14 @@ public class My_Reservation extends Fragment {
 
         for (int i=0; i < operte.length; i++)
         {
-            Reservation_Model  reservationModel = new Reservation_Model(operte[i],price[i],date[i]);
+            View_All_Model  reservationModel = new View_All_Model(operte[i],price[i],date[i]);
             reservation_models.add(reservationModel);
 
         }
 
-        RecyclerView recyclerView = (RecyclerView)view.findViewById(R.id.rcyReservation);
+        RecyclerView recyclerView = (RecyclerView)view.findViewById(R.id.rcyViewAll);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        Reservation_Adabter adabter = new Reservation_Adabter(reservation_models,getContext());
+        View_all_Adabter adabter = new View_all_Adabter(reservation_models,getContext());
         recyclerView.setAdapter(adabter);
 
         return view;

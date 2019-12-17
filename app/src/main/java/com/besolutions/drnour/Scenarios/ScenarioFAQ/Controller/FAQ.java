@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.besolutions.drnour.R;
+import com.besolutions.drnour.Scenarios.ScenarioHome.Controller.MainActivity;
 
 public class FAQ extends Fragment {
 
@@ -20,6 +21,8 @@ public class FAQ extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
         view = inflater.inflate(R.layout.faq, container, false);
+        ((MainActivity) getActivity()).getSupportActionBar().setTitle("FAQ");
+
         return view;
     }
 

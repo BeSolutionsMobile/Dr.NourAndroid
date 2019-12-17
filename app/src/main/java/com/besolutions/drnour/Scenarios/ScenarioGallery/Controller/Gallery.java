@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.besolutions.drnour.R;
+import com.besolutions.drnour.Scenarios.ScenarioHome.Controller.MainActivity;
 
 public class Gallery extends Fragment {
 
@@ -21,6 +22,8 @@ public class Gallery extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
         view = inflater.inflate(R.layout.gallery, container, false);
+        ((MainActivity) getActivity()).getSupportActionBar().setTitle("Gallery");
+
         return view;
     }
 

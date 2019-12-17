@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.besolutions.drnour.R;
+import com.besolutions.drnour.Scenarios.ScenarioHome.Controller.MainActivity;
 
 public class Personal_Fragment extends Fragment {
 
@@ -20,6 +21,7 @@ public class Personal_Fragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
         view = inflater.inflate(R.layout.personal_fragment, container, false);
+        ((MainActivity) getActivity()).getSupportActionBar().setTitle("Personal Info");
         return view;
     }
 

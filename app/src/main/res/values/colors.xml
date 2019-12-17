@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#ffff</color>
     <color name="colorAccent">#000</color>
 
+    <color name="colorPopup">#E8F6FB</color>
+
     <!--
         Check Android Theme colors for color reference:
         https://developer.android.com/training/material/images/ThemeColors.png
@@ -22,6 +24,10 @@
 
     <drawable name="pressed_gray">#0c000000</drawable>
     <drawable name="selected_gray">#2c000000</drawable>
+
+
+
+
 
     <color name="ColorFaceBook">#0b2366</color>
 
