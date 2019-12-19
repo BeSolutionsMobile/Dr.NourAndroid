@@ -43,4 +43,14 @@ dependencies {
     implementation 'com.android.volley:volley:1.1.1'
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.github.bumptech.glide:glide:4.9.0'
+    //Slider library
+    implementation "com.android.support:support-v4:+"
+    implementation 'com.squareup.picasso:picasso:2.3.2'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.daimajia.slider:library:1.1.5@aar'
+
+    //expendable TextView for FAQ
+    implementation 'com.ms-square:expandableTextView:0.1.4'
+    implementation 'net.cachapa.expandablelayout:expandablelayout:2.9.2'
+
 }

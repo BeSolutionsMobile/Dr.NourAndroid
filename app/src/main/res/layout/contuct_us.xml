@@ -1,16 +1,324 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/raduis_top_service_info"
+    android:orientation="vertical"
+    android:weightSum="1">
 
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="contact us"
-        android:textStyle="bold"
-        android:textColor="@color/myTextPrimaryColor"
-        android:textSize="@dimen/_30sdp"
-        android:gravity="center"/>
+        android:layout_height="0dp"
+        android:layout_weight=".8"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".2"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        android:layout_marginRight="@dimen/_6sdp"
+                        android:src="@drawable/arrowcontactus" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".8"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        android:gravity="center_vertical"
+                        android:scaleY="1.1"
+                        android:text="Phones"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".3"
+                            android:text="01008182062 "
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/_12sdp" />
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_weight=".03"
+                            android:gravity="center"
+                            android:text="-"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".3"
+                            android:text="01024439000 "
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_weight=".03"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:text="-"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".3"
+                            android:text="01024439000 "
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_weight=".2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:background="@color/colorPopup"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".2"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_6sdp"
+                        android:src="@drawable/arrowcontactus" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".8"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:gravity="center_vertical"
+                        android:scaleY="1.1"
+                        android:text="Email"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Info@dnour1.com"
+                            android:textColor="@color/colorAccent"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".25">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".2"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginRight="@dimen/_6sdp"
+                        android:src="@drawable/arrowcontactus" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".8"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:gravity="center_vertical"
+                        android:scaleY="1.1"
+                        android:text="Ziaed Address"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No. 551 Tower 2 Arkan Plaza,Floor5, Bostan St., Zaied City, 6 October, Giza"
+                        android:textColor="@color/colorAccent"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:paddingRight="@dimen/_20sdp"
+                        android:lineSpacingExtra="@dimen/_3sdp"
+                        android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/colorPopup"
+            android:layout_weight=".3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".2"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        android:layout_marginRight="@dimen/_6sdp"
+                        android:src="@drawable/arrowcontactus" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".8"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_25sdp"
+                        android:gravity="center_vertical"
+                        android:scaleY="1.1"
+                        android:text="Nacr City Address"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No. 123 Hassan El Mamoun St., Princess Diana Tower, In Front Of Ahly Club, Nasr City Cairo "
+                        android:textColor="@color/colorAccent"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:paddingRight="@dimen/_20sdp"
+                        android:lineSpacingExtra="@dimen/_3sdp"
+                        android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".2">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/bgcontactus" />
+
+
+    </RelativeLayout>
 
 </LinearLayout>

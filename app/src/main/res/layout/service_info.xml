@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".4">
+
+
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_25sdp"
+                custom:auto_cycle="true"
+                custom:indicator_visibility="invisible"
+                custom:pager_animation="Stack"
+                custom:pager_animation_span="1100">
+
+
+            </com.daimajia.slider.library.SliderLayout>
+
+            <com.daimajia.slider.library.Indicators.PagerIndicator
+                android:id="@+id/custom_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/raduis_all_service_info"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="HOLLYWOOD SMILE"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_15sdp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/raduis_top_service_info" />
+
+        </RelativeLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".59">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/raduis_bottom"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:paddingLeft="@dimen/_20sdp"
+                android:paddingRight="@dimen/_20sdp"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Info"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:text="In the center of Dr.Nour El Din Mostafa you can beautify your teeth and get a celebrity smile through the Veneers , which are used with the best international techniques through the material of zirconia and emacs. thwe characteristic of imacs are characterized by qualities similar to natural teeth characterized"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Features"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <CheckBox
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_weight=".1"
+                            android:button="@drawable/custom_checkbox"
+                            android:scaleX=".5"
+                            android:scaleY=".5" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".9"
+                            android:text="Features 1"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/_15sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_24sdp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <CheckBox
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_weight=".1"
+                            android:button="@drawable/custom_checkbox"
+                            android:scaleX=".5"
+                            android:scaleY=".5" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".9"
+                            android:text="Features 1"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/_15sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_24sdp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <CheckBox
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_weight=".1"
+                            android:button="@drawable/custom_checkbox"
+                            android:scaleX=".5"
+                            android:scaleY=".5" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".9"
+                            android:text="Features 1"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/_15sdp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnBookingNow"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/raduis_all"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:text="Booking Now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"/>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+</LinearLayout>

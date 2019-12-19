@@ -5,6 +5,8 @@
     <color name="colorAccent">#000</color>
 
     <color name="colorPopup">#E8F6FB</color>
+    <color name="colorLightGray">#BEBEBE</color>
+    <color name="colorLighterGray">#D6D5D5</color>
 
     <!--
         Check Android Theme colors for color reference:

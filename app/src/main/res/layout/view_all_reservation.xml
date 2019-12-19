@@ -77,10 +77,16 @@
 
             </LinearLayout>
 
-            <View
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_1sdp"
-                android:background="@color/colorDarkerGray2" />
+                android:layout_height="match_parent">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/colorDarkerGray2"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
 
 
         </LinearLayout>

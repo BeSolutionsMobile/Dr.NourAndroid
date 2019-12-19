@@ -27,7 +27,10 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_marginTop="@dimen/_20sdp"
-                android:src="@drawable/rostologo" />
+                android:scaleY=".7"
+                android:scaleX=".7"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:src="@drawable/logo" />
 
             <RelativeLayout
                 android:layout_width="wrap_content"

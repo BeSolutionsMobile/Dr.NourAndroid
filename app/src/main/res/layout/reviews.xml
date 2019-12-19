@@ -1,17 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
 
-
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="reviews"
-        android:textStyle="bold"
-        android:textColor="@color/myTextPrimaryColor"
-        android:textSize="@dimen/_30sdp"
-        android:gravity="center"/>
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/raduis_all"
+            android:layout_weight=".45">
+
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_25sdp"
+                custom:auto_cycle="true"
+                custom:indicator_visibility="invisible"
+                custom:pager_animation="Stack"
+                custom:pager_animation_span="1100">
+
+
+            </com.daimajia.slider.library.SliderLayout>
+
+            <com.daimajia.slider.library.Indicators.PagerIndicator
+                android:id="@+id/custom_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/raduis_all_service_info"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Image Reviews"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_14sdp" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/raduis_bottom" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".08"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:text="Videos Reviews"/>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 </LinearLayout>

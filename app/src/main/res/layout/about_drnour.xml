@@ -1,15 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="about us"
-        android:textStyle="bold"
-        android:textColor="@color/myTextPrimaryColor"
-        android:textSize="@dimen/_30sdp"
-        android:gravity="center"/>
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".3"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="@dimen/_160sdp"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/colorPopup" />
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/view2"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@color/colorDarkerGray2"
+                android:elevation="12dp"
+                android:innerRadius="0dp"
+                android:shape="oval"
+                android:thicknessRatio="2"
+                app:cardBackgroundColor="@color/colorPopup"
+                app:cardCornerRadius="65dp">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/view3"
+                    android:layout_width="126dp"
+                    android:layout_height="126dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:elevation="12dp"
+                    android:innerRadius="0dp"
+                    android:padding="5dp"
+                    android:shape="oval"
+                    android:thicknessRatio="2"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="63dp">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="122dp"
+                        android:layout_height="122dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:elevation="12dp"
+                        android:innerRadius="0dp"
+                        android:padding="5dp"
+                        android:shape="oval"
+                        android:thicknessRatio="2"
+                        app:cardCornerRadius="61dp">
+
+
+                        <ImageView
+                            android:id="@+id/profilePhoto"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/drpicture" />
+                    </android.support.v7.widget.CardView>
+                </android.support.v7.widget.CardView>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".69"
+            android:background="@drawable/raduis_all_light"
+            android:backgroundTint="@color/colorPopup"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_weight=".1"
+                android:gravity="center"
+                android:text="About Dr Nour"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold" />
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".9">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="@dimen/_5sdp"
+                        android:paddingLeft="@dimen/_20sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_20sdp"
+                        android:paddingBottom="@dimen/_20sdp"
+                        android:text="Dr. Nour El Din Mostafa Center Is One Of The
+Largest Dental Clinics All Over The World
+Constructed In Egypt On An Area Over 2000
+M2, Having More Than 20 Dental Clinics And
+250 Employees. Our Dental Team Composed Of
+Highly Qualified Consultants And Specialists
+Having Respectful Well Known International
+Degrees As Australian And American Board,
+Masters And Ph.D. Degrees And Membership
+Of Royal College Of Eden Bar. Dr Nour Center
+Cofounded By Dr. Nour El-Din Mustafa In 2000
+Based On The Idea Of “Immediate Cosmetic
+Dentistry Without Pain” Instead Of Visiting The
+Dental Clinic More Frequently To Do The
+Cosmetic Procedure. Now The Patient Can Get"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/_13sdp" />
+
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

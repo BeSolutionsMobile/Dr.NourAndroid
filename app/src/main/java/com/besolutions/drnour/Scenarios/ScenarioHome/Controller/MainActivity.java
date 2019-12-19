@@ -2,19 +2,21 @@ package com.besolutions.drnour.Scenarios.ScenarioHome.Controller;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.besolutions.drnour.Scenarios.ScenarioAboutDrNour.Controller.About_DrNour;
+import com.besolutions.drnour.Scenarios.ScenarioAllServices.Controller.All_Service;
 import com.besolutions.drnour.Scenarios.ScenarioBookingReferralMe.Controller.Booking_Referral;
 import com.besolutions.drnour.Scenarios.ScenarioContactUs.Controller.Contact_Us;
 import com.besolutions.drnour.Scenarios.ScenarioFAQ.Controller.FAQ;
 import com.besolutions.drnour.Scenarios.ScenarioGallery.Controller.Gallery;
+import com.besolutions.drnour.Scenarios.ScenarioHome.Pattrens.IFOnBackPressed;
 import com.besolutions.drnour.Scenarios.ScenarioHome.Pattrens.NavigationDrawerCallbacks;
 import com.besolutions.drnour.Scenarios.ScenarioHome.Pattrens.NavigationDrawerFragment;
 import com.besolutions.drnour.R;
@@ -23,7 +25,7 @@ import com.besolutions.drnour.Scenarios.ScenarioPersonalInfo.Controller.Personal
 import com.besolutions.drnour.Scenarios.ScenarioReferral.Controller.My_Referral;
 import com.besolutions.drnour.Scenarios.ScenarioResevation.Controller.My_Reservation;
 import com.besolutions.drnour.Scenarios.ScenarioReviews.Controller.Reviews;
-import com.besolutions.drnour.Scenarios.ScenarioViewAllReservations.Controller.View_All_Reservation;
+import com.besolutions.drnour.Scenarios.ScenarioServiceInfo.Controller.Service_Info;
 
 
 public class MainActivity extends AppCompatActivity
@@ -41,13 +43,12 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        title="Dr Noor";
         mToolbar = (Toolbar) findViewById(R.id.toolbar_actionbar);
         mToolbar.setTitleTextColor(Color.parseColor("#ffffff"));
-        mToolbar.setTitle(title);
+
         setSupportActionBar(mToolbar);
         FragmentTransaction fr = this.getSupportFragmentManager().beginTransaction();
-        fr.replace(R.id.container,new View_All_Reservation());
+        fr.replace(R.id.container, new All_Service());
         fr.commit();
 
 
@@ -63,70 +64,72 @@ public class MainActivity extends AppCompatActivity
         // update the main content by replacing fragments
         if (position == 0) {
             FragmentTransaction fr = this.getSupportFragmentManager().beginTransaction();
-            fr.replace(R.id.container,new Personal_Fragment());
+            fr.replace(R.id.container, new Personal_Fragment());
+            fr.addToBackStack(null);
             fr.commit();
         } else if (position == 1) {
 
             FragmentTransaction fr = this.getSupportFragmentManager().beginTransaction();
-            fr.replace(R.id.container,new My_Reservation());
+            fr.replace(R.id.container, new My_Reservation());
+            fr.addToBackStack(null);
             fr.commit();
 
         } else if (position == 2) {
 
             FragmentTransaction fr = this.getSupportFragmentManager().beginTransaction();
-            fr.replace(R.id.container,new My_Referral());
+            fr.replace(R.id.container, new My_Referral());
+            fr.addToBackStack(null);
             fr.commit();
 
         } else if (position == 3) {
             FragmentTransaction fr = this.getSupportFragmentManager().beginTransaction();
-            fr.replace(R.id.container,new Booking_Referral());
+            fr.replace(R.id.container, new Booking_Referral());
+            fr.addToBackStack(null);
             fr.commit();
 
         } else if (position == 4) {
 
             FragmentTransaction fr = this.getSupportFragmentManager().beginTransaction();
-            fr.replace(R.id.container,new My_Balance());
+            fr.replace(R.id.container, new My_Balance());
+            fr.addToBackStack(null);
             fr.commit();
 
         } else if (position == 5) {
 
             FragmentTransaction fr = this.getSupportFragmentManager().beginTransaction();
-            fr.replace(R.id.container,new About_DrNour());
+            fr.replace(R.id.container, new About_DrNour());
+            fr.addToBackStack(null);
             fr.commit();
 
         } else if (position == 6) {
 
             FragmentTransaction fr = this.getSupportFragmentManager().beginTransaction();
-            fr.replace(R.id.container,new FAQ());
+            fr.replace(R.id.container, new FAQ());
+            fr.addToBackStack(null);
             fr.commit();
 
         } else if (position == 7) {
             FragmentTransaction fr = this.getSupportFragmentManager().beginTransaction();
-            fr.replace(R.id.container,new Reviews());
+            fr.replace(R.id.container, new Reviews());
+            fr.addToBackStack(null);
             fr.commit();
 
         } else if (position == 8) {
             FragmentTransaction fr = this.getSupportFragmentManager().beginTransaction();
-            fr.replace(R.id.container,new Gallery());
+            fr.replace(R.id.container, new Gallery());
+            fr.addToBackStack(null);
             fr.commit();
 
         } else {
             FragmentTransaction fr = this.getSupportFragmentManager().beginTransaction();
-            fr.replace(R.id.container,new Contact_Us());
+            fr.replace(R.id.container, new Contact_Us());
+            fr.addToBackStack(null);
             fr.commit();
 
         }
-        Toast.makeText(this, "Menu item selected -> " + position, Toast.LENGTH_SHORT).show();
     }
 
 
-    @Override
-    public void onBackPressed() {
-        if (mNavigationDrawerFragment.isDrawerOpen())
-            mNavigationDrawerFragment.closeDrawer();
-        else
-            super.onBackPressed();
-    }
 
 
     @Override
@@ -158,5 +161,15 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-
+    @Override
+    public void onBackPressed() {
+        if (mNavigationDrawerFragment.isDrawerOpen())
+            mNavigationDrawerFragment.closeDrawer();
+        else {
+            Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.container);
+            if (!(fragment instanceof IFOnBackPressed) || !((IFOnBackPressed) fragment).onBackPressed()) {
+                super.onBackPressed();
+            }
+        }
+    }
 }
