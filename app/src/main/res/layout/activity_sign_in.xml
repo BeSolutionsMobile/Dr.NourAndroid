@@ -114,9 +114,9 @@
                     android:layout_marginLeft="@dimen/_7sdp"
                     android:layout_marginRight="@dimen/_8sdp"
                     android:layout_weight=".12"
-                    android:padding="@dimen/_3sdp"
-                    android:src="@drawable/elevator"
-                    android:tint="@color/colorDarkerGray2" />
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/mailicon"
+                    android:tint="@color/colorDarkerGray3" />
 
                 <View
                     android:layout_width="@dimen/_1sdp"
@@ -158,9 +158,9 @@
                     android:layout_marginLeft="@dimen/_7sdp"
                     android:layout_marginRight="@dimen/_8sdp"
                     android:layout_weight=".12"
-                    android:padding="@dimen/_5sdp"
-                    android:src="@drawable/lock"
-                    android:tint="@color/colorDarkerGray2" />
+                    android:padding="@dimen/_8sdp"
+                    android:src="@drawable/lockicon"
+                    android:tint="@color/colorDarkerGray3" />
 
                 <View
                     android:layout_width="@dimen/_1sdp"
@@ -198,14 +198,14 @@
                 android:textSize="@dimen/_11sdp" />
 
             <CheckBox
-                android:id="@+id/remember_me"
+                android:id="@+id/fingerprint"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_30sdp"
                 android:layout_marginLeft="@dimen/_25sdp"
                 android:layout_marginTop="@dimen/_25sdp"
                 android:layout_marginRight="@dimen/_25sdp"
                 android:buttonTint="@color/colorPrimary"
-                android:checked="true"
+                android:checked="false"
                 android:text="allow biometric authentications"
                 android:textColor="@color/colorAccent"
                 android:textSize="@dimen/_13ssp" />

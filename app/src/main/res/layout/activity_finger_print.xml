@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/mainbackground"
+    tools:context=".Scenarios.ScenarioFingerPrint.Controller.FingerPrint">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:text="Fingerprint"
+        android:gravity="center"
+        android:textColor="@color/ColorFaceBook"
+        android:textStyle="bold"
+        android:id="@+id/fingerprint"
+        android:textSize="@dimen/_18ssp"/>
+    <ImageView
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:padding="@dimen/_15sdp"
+        android:tint="@color/ColorFaceBook"
+        android:id="@+id/finger"
+        app:srcCompat="@drawable/finger"
+        android:background="@drawable/eclipse"
+        android:backgroundTint="@color/ColorFaceBook"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:text="Login using fingerprint"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:textColor="@color/ColorFaceBook"
+        android:layout_marginBottom="@dimen/_70sdp"
+        android:textSize="@dimen/_14sdp"/>
+
+</LinearLayout>

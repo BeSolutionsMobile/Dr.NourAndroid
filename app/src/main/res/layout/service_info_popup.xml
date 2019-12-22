@@ -8,7 +8,6 @@
     android:backgroundTint="@color/colorPopup"
     android:gravity="center"
     android:minWidth="1000dp"
-    android:minHeight="@dimen/_300sdp"
     android:orientation="vertical">
 
     <android.support.v7.widget.CardView

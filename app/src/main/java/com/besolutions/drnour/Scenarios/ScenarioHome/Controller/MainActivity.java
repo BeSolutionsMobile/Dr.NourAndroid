@@ -1,5 +1,6 @@
 package com.besolutions.drnour.Scenarios.ScenarioHome.Controller;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.besolutions.drnour.Scenarios.ScenarioAboutDrNour.Controller.About_DrNour;
 import com.besolutions.drnour.Scenarios.ScenarioAllServices.Controller.All_Service;
@@ -26,6 +28,8 @@ import com.besolutions.drnour.Scenarios.ScenarioReferral.Controller.My_Referral;
 import com.besolutions.drnour.Scenarios.ScenarioResevation.Controller.My_Reservation;
 import com.besolutions.drnour.Scenarios.ScenarioReviews.Controller.Reviews;
 import com.besolutions.drnour.Scenarios.ScenarioServiceInfo.Controller.Service_Info;
+import com.theartofdev.edmodo.cropper.CropImage;
+import com.theartofdev.edmodo.cropper.CropImageView;
 
 
 public class MainActivity extends AppCompatActivity
@@ -64,7 +68,7 @@ public class MainActivity extends AppCompatActivity
         // update the main content by replacing fragments
         if (position == 0) {
             FragmentTransaction fr = this.getSupportFragmentManager().beginTransaction();
-            fr.replace(R.id.container, new Personal_Fragment());
+            fr.replace(R.id.container, new Personal_Fragment(),"Personal_Fragment");
             fr.addToBackStack(null);
             fr.commit();
         } else if (position == 1) {
@@ -171,5 +175,19 @@ public class MainActivity extends AppCompatActivity
                 super.onBackPressed();
             }
         }
+    }
+
+   public void onChooseFile (View v){
+
+        CropImage.activity()
+                .setMaxCropResultSize(250,250)
+                .setCropShape(CropImageView.CropShape.RECTANGLE)
+                .start(this);
+
+    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        Fragment fragment = getSupportFragmentManager().findFragmentByTag("Personal_Fragment");
+        fragment.onActivityResult(requestCode, resultCode, data);
     }
 }
