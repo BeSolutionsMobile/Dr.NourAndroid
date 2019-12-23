@@ -16,13 +16,13 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:background="@drawable/raduis_all"
-            android:layout_weight=".45">
+            android:layout_weight=".5">
 
             <com.daimajia.slider.library.SliderLayout
                 android:id="@+id/slider"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_30sdp"
                 custom:auto_cycle="true"
                 custom:indicator_visibility="invisible"
                 custom:pager_animation="Stack"
@@ -39,11 +39,12 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_40sdp"
+                android:layout_height="@dimen/_50sdp"
                 android:layout_alignParentTop="true"
-                android:background="@drawable/raduis_all_service_info"
+                android:background="@drawable/raduis_top_service_info"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="Image Reviews"
+                android:text="Images Reviews"
+                android:textStyle="bold"
                 android:textColor="@color/colorAccent"
                 android:textSize="@dimen/_14sdp" />
 

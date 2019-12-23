@@ -2,16 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="@dimen/_260sdp"
     android:background="@drawable/raduis_all_blue"
     android:backgroundTint="@color/colorPopup"
     android:gravity="center_horizontal"
-    android:minWidth="1000dp"
+    android:minWidth="@dimen/_300sdp"
+    android:minHeight="@dimen/_260sdp"
     android:orientation="vertical">
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:backgroundTint="@color/colorPopup"
         android:layoutDirection="ltr"
         app:cardCornerRadius="@dimen/_10sdp"
@@ -20,14 +21,14 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
             <android.support.v7.widget.CardView
                 android:id="@+id/view2"
-                android:layout_width="@dimen/_90sdp"
-                android:layout_height="@dimen/_90sdp"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/_30sdp"
                 android:layout_marginBottom="20dp"
@@ -36,7 +37,7 @@
                 android:shape="oval"
                 android:thicknessRatio="2"
                 app:cardBackgroundColor="@color/colorPrimaryDark"
-                app:cardCornerRadius="@dimen/_45sdp">
+                app:cardCornerRadius="@dimen/_30sdp">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -48,15 +49,16 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
+                android:gravity="center_horizontal|center_vertical"
                 android:text="Ahmed Fathi Abd Elazm"
                 android:textColor="@color/colorAccent"
+                android:textStyle="bold"
                 android:textSize="@dimen/_12sdp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_11sdp"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:orientation="horizontal"
                 android:weightSum="1">
 
@@ -121,40 +123,39 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_11sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:orientation="horizontal"
-                android:gravity="center_vertical|center_horizontal"
+                android:gravity="center_horizontal"
                 android:weightSum="1"
                 >
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:textColor="@color/colorAccent"
-                    android:textSize="@dimen/_12sdp"
-                    android:gravity="right"
-                    android:padding="@dimen/_2sdp"
-                    android:text="Earned by him :"/>
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical|right"
+                    android:text="Earned by him : "/>
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:textColor="@color/colorAccent"
-                    android:textSize="@dimen/_12sdp"
-                    android:gravity="left"
+                    android:textSize="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:textStyle="bold"
                     android:padding="@dimen/_2sdp"
-                    android:text="3000"/>
+                    android:text="30000000000000"/>
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight=".1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:textColor="@color/colorAccent"
-                    android:textSize="@dimen/_12sdp"
-                    android:gravity="left"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical|left"
                     android:padding="@dimen/_2sdp"
                     android:text="EGP"/>
 
@@ -170,7 +171,8 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:background="@drawable/reduis"
                 android:textSize="@dimen/_11sdp"
-                android:layout_marginTop="@dimen/_11sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
                 />
 
         </LinearLayout>

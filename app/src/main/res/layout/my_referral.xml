@@ -2,42 +2,43 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="1">
 
-    <RelativeLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/raduis_all"
+        android:orientation="vertical"
+        android:weightSum="1">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_220sdp"
-            android:layout_alignParentBottom="true"
-            android:src="@drawable/bgdentist"
-            android:scaleType="fitXY"/>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:weightSum="1">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_weight=".6"
             android:orientation="vertical"
-            android:layout_weight=".62">
+            android:weightSum="1">
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rcyReferral"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_270sdp"
-                android:background="@drawable/raduis_all"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:paddingTop="@dimen/_10sdp"
-                android:paddingBottom="@dimen/_20sdp"/>
+                android:paddingBottom="@dimen/_15sdp" />
 
         </LinearLayout>
-        </LinearLayout>
-    </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".4"
+            android:scaleType="fitXY"
+            android:src="@drawable/teathphoto" />
+
+
+    </LinearLayout>
 
 
 </LinearLayout>

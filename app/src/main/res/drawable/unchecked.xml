@@ -2,7 +2,7 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
     <corners android:radius="1dp" />
     <stroke
-        android:width="@dimen/_2sdp"
+        android:width="@dimen/_1sdp"
         android:color="@color/colorAccent" />
 
     <padding android:bottom="@dimen/_1sdp" android:left="@dimen/_1sdp" android:right="@dimen/_1sdp" android:top="@dimen/_1sdp"/>
@@ -13,6 +13,6 @@
         android:endColor="@color/colorPrimaryDark"
         android:angle="270" />
     <size
-        android:width="@dimen/_24sdp"
-        android:height="@dimen/_24sdp" />
+        android:width="@dimen/_8sdp"
+        android:height="@dimen/_8sdp" />
 </shape>
