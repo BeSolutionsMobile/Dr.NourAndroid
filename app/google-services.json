@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "601206499514",
+    "firebase_url": "https://drnourandroid.firebaseio.com",
+    "project_id": "drnourandroid",
+    "storage_bucket": "drnourandroid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:601206499514:android:846cc8bffe23827271fa83",
+        "android_client_info": {
+          "package_name": "com.besolutions.drnour"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "601206499514-03rqrcvo70cpdsvs65vhlksh3r3g0263.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.besolutions.drnour",
+            "certificate_hash": "e5b61228440b756f4639fabe71194f688586e242"
+          }
+        },
+        {
+          "client_id": "601206499514-ge9t87ja9ckcfshi7u2nhrsbgbco6l6a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAEhR3F9_zO8E0EaZqrIWt0Ij4I77FVjs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "601206499514-ge9t87ja9ckcfshi7u2nhrsbgbco6l6a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

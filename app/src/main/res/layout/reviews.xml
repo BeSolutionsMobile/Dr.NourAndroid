@@ -26,16 +26,9 @@
                 custom:auto_cycle="true"
                 custom:indicator_visibility="invisible"
                 custom:pager_animation="Stack"
-                custom:pager_animation_span="1100">
+                custom:pager_animation_span="1100"/>
 
 
-            </com.daimajia.slider.library.SliderLayout>
-
-            <com.daimajia.slider.library.Indicators.PagerIndicator
-                android:id="@+id/custom_indicator"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -48,13 +41,21 @@
                 android:textColor="@color/colorAccent"
                 android:textSize="@dimen/_14sdp" />
 
-
+            <com.daimajia.slider.library.Indicators.PagerIndicator
+                android:id="@+id/custom_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
         </RelativeLayout>
 
-        <View
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="@dimen/_30sdp"
-            android:background="@drawable/raduis_bottom" />
+            android:background="@drawable/raduis_bottom" >
+
+
+
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"

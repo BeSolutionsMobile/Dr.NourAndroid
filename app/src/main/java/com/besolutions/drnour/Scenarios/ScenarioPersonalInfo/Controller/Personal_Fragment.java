@@ -51,6 +51,7 @@ public class Personal_Fragment extends Fragment {
         ((MainActivity) getActivity()).getSupportActionBar().setTitle("Personal Info");
         FirebaseApp.initializeApp(getContext());
 
+        FirebaseApp.initializeApp(getActivity());
         storage = FirebaseStorage.getInstance();
         storageReference = storage.getReference();
 
@@ -137,6 +138,8 @@ public class Personal_Fragment extends Fragment {
                 firebase_storage.uploadImage(selectedImage,getContext(),true);
 
                 Log.e("akakkakkakakkaka",""+selectedImage);
+
+
                 //SET IMAGE
                 Add_Photo_Popup addPhotoPopup=new Add_Photo_Popup();
                 addPhotoPopup.set_image(bitmaps,firebase_storage.uploadImage(selectedImage,getContext(),true));

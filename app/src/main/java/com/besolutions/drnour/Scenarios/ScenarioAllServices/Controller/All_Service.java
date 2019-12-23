@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import com.besolutions.drnour.R;
 import com.besolutions.drnour.Scenarios.ScenarioAllServices.Model.AllServicesModel;
 import com.besolutions.drnour.Scenarios.ScenarioAllServices.Pattrens.AllServiceAdapter;
+import com.besolutions.drnour.Scenarios.ScenarioHome.Controller.MainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +31,7 @@ public class All_Service extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
         view = inflater.inflate(R.layout.all_service, container, false);
+        ((MainActivity) getActivity()).getSupportActionBar().setTitle("All Services");
 
 
         List<AllServicesModel> allServicesList = new ArrayList<>();

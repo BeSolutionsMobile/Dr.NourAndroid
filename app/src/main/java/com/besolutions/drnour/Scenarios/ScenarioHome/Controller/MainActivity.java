@@ -28,6 +28,9 @@ import com.besolutions.drnour.Scenarios.ScenarioReferral.Controller.My_Referral;
 import com.besolutions.drnour.Scenarios.ScenarioResevation.Controller.My_Reservation;
 import com.besolutions.drnour.Scenarios.ScenarioReviews.Controller.Reviews;
 import com.besolutions.drnour.Scenarios.ScenarioServiceInfo.Controller.Service_Info;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
@@ -41,6 +44,8 @@ public class MainActivity extends AppCompatActivity
     private NavigationDrawerFragment mNavigationDrawerFragment;
     static private Toolbar mToolbar;
     static String title;
+    FirebaseStorage storage;
+    StorageReference storageReference;
 
 
     @Override
@@ -49,6 +54,11 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         mToolbar = (Toolbar) findViewById(R.id.toolbar_actionbar);
         mToolbar.setTitleTextColor(Color.parseColor("#ffffff"));
+
+        FirebaseApp.initializeApp(this);
+
+        storage = FirebaseStorage.getInstance();
+        storageReference = storage.getReference();
 
         setSupportActionBar(mToolbar);
         FragmentTransaction fr = this.getSupportFragmentManager().beginTransaction();

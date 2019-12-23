@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.Uri;
 import android.support.annotation.NonNull;
+import android.util.Log;
 import android.widget.Toast;
 import com.besolutions.drnour.local_data.send_data;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -73,6 +74,7 @@ public class firebase_storage {
                         public void onFailure(@NonNull Exception e) {
                             progressDialog.dismiss();
                             Toast.makeText(context, failed, Toast.LENGTH_SHORT).show();
+                            Log.e("fafafafaffaffaf",""+e);
                         }
                     })
                     .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {

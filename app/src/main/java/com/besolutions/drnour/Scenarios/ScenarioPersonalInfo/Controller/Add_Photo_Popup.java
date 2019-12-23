@@ -39,7 +39,7 @@ public class Add_Photo_Popup extends DialogFragment {
             getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         }
 
-        imageView = getDialog().findViewById(R.id.imgUser);
+        imageView = view.findViewById(R.id.imgUser);
         this.image_uplaod=imageView;
 
         return view;
