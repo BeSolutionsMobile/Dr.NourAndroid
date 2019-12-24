@@ -14,9 +14,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.besolutions.drnour.R;
 import com.besolutions.drnour.Scenarios.ScenarioHome.Model.NavigationItem;
+import com.besolutions.drnour.local_data.saved_data;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -88,6 +90,8 @@ public class NavigationDrawerFragment extends Fragment implements NavigationDraw
         mDrawerList.setAdapter(adapter);
         selectItem(mCurrentSelectedPosition);
         return view;
+
+
     }
 
     public boolean isDrawerOpen() {
@@ -109,6 +113,7 @@ public class NavigationDrawerFragment extends Fragment implements NavigationDraw
 
     public List<NavigationItem> getMenu() {
         List<NavigationItem> items = new ArrayList<NavigationItem>();
+        items.add(new NavigationItem("All Services", getResources().getDrawable(R.drawable.ic_menu_check)));
         items.add(new NavigationItem("Personal info", getResources().getDrawable(R.drawable.ic_menu_check)));
         items.add(new NavigationItem("My reservations", getResources().getDrawable(R.drawable.ic_menu_check)));
         items.add(new NavigationItem("My referral", getResources().getDrawable(R.drawable.ic_menu_check)));

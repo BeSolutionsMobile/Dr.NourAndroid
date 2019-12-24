@@ -135,9 +135,8 @@ public class Personal_Fragment extends Fragment {
                 bitmaps = Bitmap.createScaledBitmap(SelectedPhoto, 300, 300, true);
 
                 firebase_storage firebase_storage=new firebase_storage();
-                firebase_storage.uploadImage(selectedImage,getContext(),true);
+                //firebase_storage.uploadImage(selectedImage,getContext(),true);
 
-                Log.e("akakkakkakakkaka",""+selectedImage);
 
 
                 //SET IMAGE

@@ -32,5 +32,13 @@ public class send_data {
         editor.commit();
     }
 
+    public static void SAVE_VIDEO_URL(Context context, String image)
+    {
+        SharedPreferences sharedPreferences=context.getSharedPreferences("video_url",MODE_PRIVATE);
+        SharedPreferences.Editor editor=sharedPreferences.edit();
+        editor.putString("video_url", image);
+        editor.commit();
+    }
+
 
 }

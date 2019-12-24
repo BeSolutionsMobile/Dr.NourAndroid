@@ -27,6 +27,7 @@
             app:cardCornerRadius="@dimen/_35sdp">
 
             <ImageView
+                android:id="@+id/imgNav"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/drpicture"/>

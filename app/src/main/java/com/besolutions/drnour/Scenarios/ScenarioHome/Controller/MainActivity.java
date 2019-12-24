@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.besolutions.drnour.Scenarios.ScenarioAboutDrNour.Controller.About_DrNour;
 import com.besolutions.drnour.Scenarios.ScenarioAllServices.Controller.All_Service;
@@ -28,6 +29,8 @@ import com.besolutions.drnour.Scenarios.ScenarioReferral.Controller.My_Referral;
 import com.besolutions.drnour.Scenarios.ScenarioResevation.Controller.My_Reservation;
 import com.besolutions.drnour.Scenarios.ScenarioReviews.Controller.Reviews;
 import com.besolutions.drnour.Scenarios.ScenarioServiceInfo.Controller.Service_Info;
+import com.besolutions.drnour.local_data.saved_data;
+import com.bumptech.glide.Glide;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -46,12 +49,14 @@ public class MainActivity extends AppCompatActivity
     static String title;
     FirebaseStorage storage;
     StorageReference storageReference;
+    ImageView imageView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        imageView = findViewById(R.id.imgNav);
         mToolbar = (Toolbar) findViewById(R.id.toolbar_actionbar);
         mToolbar.setTitleTextColor(Color.parseColor("#ffffff"));
 
@@ -65,6 +70,14 @@ public class MainActivity extends AppCompatActivity
         fr.replace(R.id.container, new All_Service());
         fr.commit();
 
+        saved_data saved_data = new saved_data();
+
+        String nav_url = saved_data.get_image_nav(this);
+
+        Glide.with(this)
+                .load(nav_url)
+                .placeholder(R.drawable.drpicture)
+                .into(imageView);
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getFragmentManager().findFragmentById(R.id.fragment_drawer);
@@ -78,57 +91,63 @@ public class MainActivity extends AppCompatActivity
         // update the main content by replacing fragments
         if (position == 0) {
             FragmentTransaction fr = this.getSupportFragmentManager().beginTransaction();
-            fr.replace(R.id.container, new Personal_Fragment(),"Personal_Fragment");
+            fr.replace(R.id.container, new All_Service());
             fr.addToBackStack(null);
             fr.commit();
-        } else if (position == 1) {
+
+        }else if(position == 1) {
+            FragmentTransaction fr = this.getSupportFragmentManager().beginTransaction();
+            fr.replace(R.id.container, new Personal_Fragment(), "Personal_Fragment");
+            fr.addToBackStack(null);
+            fr.commit();
+        } else if (position == 2) {
 
             FragmentTransaction fr = this.getSupportFragmentManager().beginTransaction();
             fr.replace(R.id.container, new My_Reservation());
             fr.addToBackStack(null);
             fr.commit();
 
-        } else if (position == 2) {
+        } else if (position == 3) {
 
             FragmentTransaction fr = this.getSupportFragmentManager().beginTransaction();
             fr.replace(R.id.container, new My_Referral());
             fr.addToBackStack(null);
             fr.commit();
 
-        } else if (position == 3) {
+        } else if (position == 4) {
             FragmentTransaction fr = this.getSupportFragmentManager().beginTransaction();
             fr.replace(R.id.container, new Booking_Referral());
-            fr.addToBackStack(null);
-            fr.commit();
-
-        } else if (position == 4) {
-
-            FragmentTransaction fr = this.getSupportFragmentManager().beginTransaction();
-            fr.replace(R.id.container, new My_Balance());
             fr.addToBackStack(null);
             fr.commit();
 
         } else if (position == 5) {
 
             FragmentTransaction fr = this.getSupportFragmentManager().beginTransaction();
-            fr.replace(R.id.container, new About_DrNour());
+            fr.replace(R.id.container, new My_Balance());
             fr.addToBackStack(null);
             fr.commit();
 
         } else if (position == 6) {
 
             FragmentTransaction fr = this.getSupportFragmentManager().beginTransaction();
-            fr.replace(R.id.container, new FAQ());
+            fr.replace(R.id.container, new About_DrNour());
             fr.addToBackStack(null);
             fr.commit();
 
         } else if (position == 7) {
+
+            FragmentTransaction fr = this.getSupportFragmentManager().beginTransaction();
+            fr.replace(R.id.container, new FAQ());
+            fr.addToBackStack(null);
+            fr.commit();
+
+        } else if (position == 8) {
             FragmentTransaction fr = this.getSupportFragmentManager().beginTransaction();
             fr.replace(R.id.container, new Reviews());
             fr.addToBackStack(null);
             fr.commit();
 
-        } else if (position == 8) {
+        } else if (position == 9) {
             FragmentTransaction fr = this.getSupportFragmentManager().beginTransaction();
             fr.replace(R.id.container, new Gallery());
             fr.addToBackStack(null);
@@ -142,8 +161,6 @@ public class MainActivity extends AppCompatActivity
 
         }
     }
-
-
 
 
     @Override
@@ -187,14 +204,15 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-   public void onChooseFile (View v){
+    public void onChooseFile(View v) {
 
         CropImage.activity()
-                .setMaxCropResultSize(250,250)
+                .setMaxCropResultSize(1300, 1300)
                 .setCropShape(CropImageView.CropShape.RECTANGLE)
                 .start(this);
 
     }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         Fragment fragment = getSupportFragmentManager().findFragmentByTag("Personal_Fragment");

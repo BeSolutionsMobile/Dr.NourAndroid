@@ -27,4 +27,11 @@ public class saved_data {
         return delivery_time;
     }
 
+    public String get_video_url(Context context)
+    {
+        SharedPreferences sharedPreferences=context.getSharedPreferences("video_url",MODE_PRIVATE);
+        String video_url=sharedPreferences.getString("video_url","0");
+        return video_url;
+    }
+
 }

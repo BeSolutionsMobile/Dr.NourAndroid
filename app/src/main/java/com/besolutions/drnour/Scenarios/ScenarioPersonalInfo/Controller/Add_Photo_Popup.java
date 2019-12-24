@@ -1,5 +1,6 @@
 package com.besolutions.drnour.Scenarios.ScenarioPersonalInfo.Controller;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -11,15 +12,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.besolutions.drnour.R;
+import com.besolutions.drnour.Scenarios.ScenarioHome.Controller.MainActivity;
 
 public class Add_Photo_Popup extends DialogFragment {
     static public ImageView imageView;
 
     public static ImageView image_uplaod;
-
+    Button btndsave;
     static  String image_url="0";
 
     @Nullable
@@ -39,8 +42,19 @@ public class Add_Photo_Popup extends DialogFragment {
             getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         }
 
+        btndsave = view.findViewById(R.id.btnSave);
         imageView = view.findViewById(R.id.imgUser);
         this.image_uplaod=imageView;
+
+        btndsave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getDialog().dismiss();
+
+                startActivity(new Intent(getContext(), MainActivity.class));
+
+            }
+        });
 
         return view;
     }

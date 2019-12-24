@@ -12,27 +12,16 @@
         android:orientation="vertical"
         android:weightSum="1">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:orientation="vertical"
             android:background="@drawable/raduis_all"
             android:layout_weight=".5">
 
-            <com.daimajia.slider.library.SliderLayout
-                android:id="@+id/slider"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/_30sdp"
-                custom:auto_cycle="true"
-                custom:indicator_visibility="invisible"
-                custom:pager_animation="Stack"
-                custom:pager_animation_span="1100"/>
-
-
-
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_50sdp"
+                android:layout_height="@dimen/_40sdp"
                 android:layout_alignParentTop="true"
                 android:background="@drawable/raduis_top_service_info"
                 android:gravity="center_vertical|center_horizontal"
@@ -41,21 +30,59 @@
                 android:textColor="@color/colorAccent"
                 android:textSize="@dimen/_14sdp" />
 
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                custom:auto_cycle="true"
+                custom:indicator_visibility="invisible"
+                custom:pager_animation="Stack"
+                custom:pager_animation_span="1100"/>
+
+
+            <com.daimajia.slider.library.Indicators.PagerIndicator
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:gravity="center"
+            android:background="@drawable/raduis_bottom" >
+
             <com.daimajia.slider.library.Indicators.PagerIndicator
                 android:id="@+id/custom_indicator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center" />
+                android:gravity="center"
+                custom:selected_color="@color/colorPrimary"
+                custom:unselected_color="@color/colorDarkerGray2"
+                custom:selected_drawable="@drawable/checked"
+                custom:unselected_drawable="@drawable/unchecked"
+                custom:shape="oval"
+                custom:selected_padding_left="5dp"
+                custom:selected_padding_right="5dp"
+                custom:unselected_padding_left="5dp"
+                custom:unselected_padding_right="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                custom:selected_width="6dp"
+                custom:selected_height="6dp"
+                custom:unselected_width="6dp"
+                custom:unselected_height="6dp"
+                android:layout_marginBottom="20dp" />
+
+            <com.daimajia.slider.library.Indicators.PagerIndicator
+                android:id="@+id/custom_indicator2"
+                style="@style/AndroidImageSlider_Corner_Oval_Orange"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                />
+
         </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_30sdp"
-            android:background="@drawable/raduis_bottom" >
-
-
-
-        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -71,9 +98,37 @@
                 android:textStyle="bold"
                 android:text="Videos Reviews"/>
 
-
-
         </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".42"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <com.daimajia.slider.library.SliderLayout
+                    android:id="@+id/slidervideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".85"
+                    custom:auto_cycle="true"
+                    custom:indicator_visibility="invisible"
+                    custom:pager_animation="Stack"
+                    custom:pager_animation_span="1100"/>
+
+
+
+                <com.daimajia.slider.library.Indicators.PagerIndicator
+                    android:id="@+id/custom_indicatorVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+            </LinearLayout>
+
+
+
+
 
 
     </LinearLayout>
